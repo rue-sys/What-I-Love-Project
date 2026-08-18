@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Beyond the Court</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            🏀 BEYOND THE COURT
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="story.html">My Story</a>
+            <a href="players.html">Players</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Contact Heading -->
+        <section class="contact-hero">
+
+            <p class="small-title">LET'S TALK BASKETBALL</p>
+
+            <h1>
+                Start a
+                <span>Conversation.</span>
+            </h1>
+
+            <p>
+                Have a favorite player, team or basketball memory?
+                I'd love to hear about it.
+            </p>
+
+        </section>
+
+
+        <!-- Contact Area -->
+        <section class="contact-section">
+
+            <div class="contact-intro">
+
+                <p class="small-title">CONTACT</p>
+
+                <h2>
+                    Tell me
+                    <span>your story.</span>
+                </h2>
+
+                <p>
+                    Basketball means something different to everyone.
+                    Maybe you play, maybe you watch, or maybe you just
+                    love the game. Tell me what basketball means to you.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-detail">
+
+                        <i class="fa-solid fa-basketball"></i>
+
+                        <div>
+                            <h3>Favorite Sport</h3>
+                            <p>Basketball, obviously.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@beyondthecourt.com</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Form -->
+            <form class="contact-form">
+
+                <div class="form-group">
+
+                    <label for="name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="age">Your Age</label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="10"
+                        max="100"
+                        placeholder="Enter your age"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Radio -->
+                <fieldset>
+
+                    <legend>How do you enjoy basketball?</legend>
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="basketball-type"
+                            value="playing"
+                            required
+                        >
+
+                        Playing
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="basketball-type"
+                            value="watching"
+                        >
+
+                        Watching
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="basketball-type"
+                            value="both"
+                        >
+
+                        Both
+
+                    </label>
+
+                </fieldset>
+
+
+                <!-- Checkbox -->
+                <fieldset>
+
+                    <legend>What do you enjoy?</legend>
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="interest"
+                            value="nba"
+                        >
+
+                        NBA
+
+                    </label>
+
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="interest"
+                            value="playing"
+                        >
+
+                        Playing
+
+                    </label>
+
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="interest"
+                            value="teams"
+                        >
+
+                        Teamwork
+
+                    </label>
+
+                </fieldset>
+
+
+                <!-- Range -->
+                <div class="form-group">
+
+                    <label for="satisfaction">
+                        How much do you love basketball?
+                    </label>
+
+                    <input
+                        type="range"
+                        id="satisfaction"
+                        name="satisfaction"
+                        min="1"
+                        max="10"
+                        value="8"
+                    >
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">Your Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me your favorite basketball memory..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+
+                    Send Message
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>🏀 Beyond the Court</h3>
+
+        <p>
+            More than a game. A part of my story.
+        </p>
+
+    </footer>
+
+</body>
+</html>
