@@ -1253,9 +1253,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* 
    PLAYER GALLERY
-========================================= */
+ */
 
 .gallery-section {
     padding: 100px 7%;
@@ -1309,9 +1309,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* \
    PLAYER CARD
-========================================= */
+ */
 
 .player-card {
     background: #151515;
@@ -1431,9 +1431,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* 
    FEATURED CARD
-========================================= */
+*/
 
 .featured-player {
     min-height: 300px;
@@ -1523,9 +1523,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* 
    QUOTE
-========================================= */
+ */
 
 .gallery-quote {
     padding: 100px 7%;
@@ -1551,9 +1551,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* 
    SOCIAL ICONS
-========================================= */
+ */
 
 .social-icons {
     display: flex;
@@ -1598,9 +1598,9 @@ input[type="range"] {
 }
 
 
-/* =========================================
+/* 
    GALLERY RESPONSIVE
-========================================= */
+ */
 
 @media screen and (max-width: 1024px) {
 
@@ -1649,6 +1649,80 @@ input[type="range"] {
 
     .gallery-quote {
         padding: 80px 6%;
+    }
+
+}/* 
+   PLAYER TABLE
+*/
+
+.player-table-section {
+    padding: 90px 7%;
+    background: #111;
+    color: white;
+}
+
+.player-table-section .section-title {
+    margin-bottom: 40px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #181818;
+    border: 1px solid #333;
+}
+
+th,
+td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: #f97316;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+td {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+tbody tr {
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #242424;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Mobile table */
+
+@media screen and (max-width: 600px) {
+
+    .player-table-section {
+        padding: 70px 6%;
+    }
+
+    th,
+    td {
+        padding: 14px 12px;
+        font-size: 14px;
     }
 
 }
