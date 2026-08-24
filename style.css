@@ -1,19 +1,34 @@
 *{ box-sizing:border-box;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
 }
 html{scroll-behavior: smooth;
+html,
+body {
+    width: 100%;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}}
 body
 
 /* Navigation bar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:column;
     align-items: center;
 
     padding: 20px 60px;
-
+min-height:20px ;
+border-radius: 20px;
     background: linear-gradient(to right, #be627618, #0f0601);
 
     position: sticky;
@@ -27,7 +42,7 @@ body
     font-size: 22px;
     font-weight: bold;
     float:right;
-    color: rgb(116, 31, 31);
+    color: rgb(150, 30, 30);
   font-size: 1.3rem;
     font-weight: 700;
     text-transform:uppercase 
@@ -61,7 +76,7 @@ body
 
 /* Hover effect */
 .navbar a:hover {
-    background-color: #f97316;
+    background-color: #cb783e;
     color: white;
     transform: translateY(-2px);
 }
@@ -83,15 +98,15 @@ body
 
 /* Link pseudo-classes */
 .navbar a:link {
-    color: rgb(109, 62, 62);
+    color: rgb(238, 171, 171);
 }
 
 .navbar a:visited {
-    color: rgb(114, 85, 85);
+    color: rgb(169, 50, 50);
 }
 
 .navbar a:hover {
-    color: #f28100;
+    color: #382b1b;
 }
 
 .navbar a:active {
@@ -121,19 +136,25 @@ body
    /*========================================================
    HERO SECTION
    =========================================================  */
- 
-.hero {
+ .hero {
+    width: 100%;
     min-height: 100vh;
-
     padding: 140px 7% 80px;
-background-size: cover;
+    box-sizing: border-box;
+
     background:
         linear-gradient(
             120deg,
-            rgba(8, 8, 8, 0.95),
-            rgba(8, 8, 8, 0.55)
-        ), url(Images/hero.jpg)}
-        
+            rgba(142, 135, 135, 0.95),
+            rgba(14, 8, 8, 0.95)
+        ),
+        url("Images/hero.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .small-title {
     color: #fb923c;
     font-weight: 800;
@@ -150,7 +171,7 @@ background-size: cover;
 }
 
 .hero h1 span {
-    display: block;
+    display:block;
     color: #fb923c;
 }
 
@@ -164,11 +185,11 @@ background-size: cover;
     display:inline-block;
     padding: 13px 25px;
 
-    background: linear-gradient(to right, #e1591e, #ff6b1c);
-    color: rgb(235, 218, 218);
-    text-decoration:navajowhite;
+    background: linear-gradient(to right, #e1591e, rgb(230, 143, 56));
+    color: rgb(10, 1, 1);
+    text-decoration:rgb(12, 4, 8);
+    font-size: 1.10rem;
 
-    font-weight: 900;
     text-transform: uppercase;
 
     border-radius: 30px;
@@ -180,7 +201,7 @@ background-size: cover;
 
 .hero-button:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(206, 199, 199, 0.2);
 }
 /*=========================================================
    GENERAL SECTIONS
@@ -192,7 +213,7 @@ background-size: cover;
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 50px;;
 }
 
 .section-title p {
@@ -213,20 +234,30 @@ background-size: cover;
 ========================= */
 
 .hero-cards {
-    display: flex;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
 
-    gap: 18px;
+justify-content: center;
 
-    max-width: 1200px;
+gap:40px;
 
-    margin: auto;
+width: 100%;
+ max-width:1200px;
+
+ margin: 0 auto;
+
+padding:18px;
+
+box-sizing: border-box;
+
 }
 
 
 .hero-card {
     position: relative;
 
-    flex: 1;
+    flex:1 1  300px;
 
     min-height: 270px;
 
@@ -294,7 +325,7 @@ background-size: cover;
 .hero-card h3 {
     font-size: 25px;
 
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 
     text-transform: uppercase;
 }
@@ -309,57 +340,7 @@ background-size: cover;
 
     margin: 0;
 }
-/* =========================
-   NEVER OUTGREW SECTION
-========================= */
-
-.never-outgrew {
-    padding: 120px 7%;
-
-    background: #f4f4f4;
-
-    color: #111;
-}
-
-
-.outgrew-content {
-    max-width: 900px;
-
-    margin: auto;
-
-    text-align: center;
-}
-
-
-.outgrew-content h2 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-
-    line-height: 1;
-
-    margin: 20px 0 30px;
-
-    letter-spacing: -2px;
-}
-
-
-.outgrew-content h2 span {
-    color: #f97316;
-
-    display: block;
-}
-
-
-.outgrew-content > p:last-child {
-    max-width: 650px;
-
-    margin: auto;
-
-    color: #555;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
+ 
 
 
 /* =========================
@@ -426,6 +407,17 @@ background-size: cover;
         padding: 80px 6%;
     }
 
+
+}
+
+.footer{width: 100%;
+    padding: 40px 7%;
+    box-sizing: border-box;
+
+    background: #090909;
+    color: white;
+
+    text-align: center;
 }
 /* =========================================
    MY STORY PAGE
@@ -444,9 +436,7 @@ background-size: cover;
             120deg,
             rgba(10, 10, 10, 0.92),
             rgba(10, 10, 10, 0.5)
-        ),
-        url("images/court.jpg");
-
+        );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1197,6 +1187,468 @@ input[type="range"] {
     .radio-option,
     .check-option {
         display: flex;
+    }
+
+}/* =========================================
+   GALLERY HERO
+========================================= */
+
+.gallery-hero {
+    min-height: 65vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(10, 10, 10, 0.94),
+            rgba(10, 10, 10, 0.55)
+        ),
+        url("Images/gallery-bg.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+.gallery-hero > div {
+    max-width: 800px;
+}
+
+
+.gallery-hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    margin: 15px 0 30px;
+
+    letter-spacing: -3px;
+}
+
+
+.gallery-hero h1 span {
+    display: block;
+
+    color: #f97316;
+}
+
+
+.gallery-hero > div > p:last-child {
+    max-width: 600px;
+
+    color: #bdbdbd;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PLAYER GALLERY
+========================================= */
+
+.gallery-section {
+    padding: 100px 7%;
+
+    background: #0b0b0b;
+
+    color: white;
+}
+
+
+.gallery-section .section-title {
+    text-align: left;
+
+    max-width: 600px;
+
+    margin-bottom: 50px;
+}
+
+
+.gallery-section .section-title p {
+    color: #f97316;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.gallery-section .section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 3.5rem;
+
+    margin-top: 10px;
+}
+
+
+/* Grid */
+
+.player-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   PLAYER CARD
+========================================= */
+
+.player-card {
+    background: #151515;
+
+    border: 1px solid #292929;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.player-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #f97316;
+}
+
+
+/* Image */
+
+.player-image {
+    position: relative;
+
+    height: 390px;
+
+    overflow: hidden;
+}
+
+
+.player-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.player-card:hover .player-image img {
+    transform: scale(1.05);
+}
+
+
+/* Number */
+
+.player-number {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #f97316;
+
+    color: white;
+
+    font-weight: 800;
+
+    z-index: 2;
+}
+
+
+/* Information */
+
+.player-info {
+    padding: 28px;
+}
+
+
+.player-role {
+    color: #f97316;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.player-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.player-info p:last-child {
+    color: #999;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FEATURED CARD
+========================================= */
+
+.featured-player {
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f97316,
+            #c2410c
+        );
+
+    border: none;
+
+    text-align: center;
+}
+
+
+.featured-player:hover {
+    border: none;
+
+    transform: translateY(-8px);
+}
+
+
+.featured-content {
+    max-width: 400px;
+
+    padding: 40px;
+}
+
+
+.featured-icon {
+    display: block;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+.featured-player .player-role {
+    color: #111;
+}
+
+
+.featured-player h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.featured-player p:not(.player-role) {
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.featured-player a {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+
+.featured-player a:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.gallery-quote {
+    padding: 100px 7%;
+
+    background: #f4f4f4;
+
+    color: #111;
+
+    text-align: center;
+}
+
+
+.gallery-quote p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.social-icons a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #1c1c1c;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.social-icons a:hover {
+    background: #f97316;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   GALLERY RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .player-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .gallery-hero {
+        min-height: 55vh;
+
+        padding: 90px 6%;
+    }
+
+
+    .gallery-hero h1 {
+        font-size: 3.5rem;
+
+        letter-spacing: -2px;
+    }
+
+
+    .gallery-section {
+        padding: 80px 6%;
+    }
+
+
+    .gallery-section .section-title h2 {
+        font-size: 2.7rem;
+    }
+
+
+    .player-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .player-image {
+        height: 350px;
+    }
+
+
+    .gallery-quote {
+        padding: 80px 6%;
     }
 
 }
